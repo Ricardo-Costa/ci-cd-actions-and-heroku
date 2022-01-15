@@ -6,7 +6,7 @@ on:
   # pull_request:
   #   branches: [ main ]
   # Allows to run this workflow manually from Github
-  workflow_dispatch:
+  # workflow_dispatch:
 
 jobs:
   build:
