@@ -1,0 +1,28 @@
+{
+  "name": "ci-cd-actions-and-heroku",
+  "version": "1.0.0",
+  "description": "> This project show how configure a `CI/CD` pipeline with NodeJs application and `GitHub Actions + Heroku services`.",
+  "type": "module",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "node --experimental-vm-modules src/index.js",
+    "test": "NODE_OPTIONS=--experimental-vm-modules npx jest src/app.test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Ricardo-Costa/ci-cd-actions-and-heroku.git"
+  },
+  "author": "Ricardo Costa",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Ricardo-Costa/ci-cd-actions-and-heroku/issues"
+  },
+  "homepage": "https://github.com/Ricardo-Costa/ci-cd-actions-and-heroku#readme",
+  "dependencies": {
+    "express": "^4.17.2"
+  },
+  "devDependencies": {
+    "jest": "^27.4.7",
+    "supertest": "^6.2.1"
+  }
+}
