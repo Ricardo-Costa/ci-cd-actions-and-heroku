@@ -1,4 +1,4 @@
-name: CI
+name: CI-CD
 
 on:
   push:
@@ -10,7 +10,7 @@ on:
 
 jobs:
   build:
-    name: Nodejs Env and Test
+    name: CI - Nodejs Env and Test
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
@@ -25,3 +25,15 @@ jobs:
 
       - name: Run test
         run: npm test
+
+  deploy:
+    name: CD - Deploy to Heroku Cloud
+    runs-on: ubuntu-latest
+    needs: [build] # await build job
+    steps:
+      - uses: actions/checkout@v2
+      - uses: akhileshns/heroku-deploy@v3.12.12 # This is the action
+        with:
+          heroku_api_key: ${{secrets.HEROKU_API_KEY}} # this is a secret key from project
+          heroku_app_name: "ci-cd-actions-and-heroku" #Must be unique in Heroku
+          heroku_email: "ricardo18acs@gmail.com"
