@@ -5,9 +5,6 @@ This project show how configure a `CI/CD` pipeline with NodeJs application and `
 Settings:
 - Config two secrets on the project, `HEROKU_API_KEY` and `HEROKU_APP_NAME`.
 
-API:
-- https://my-app-name.herokuapp.com/
-
 Heroku CLI:
 - https://devcenter.heroku.com/categories/command-line
 - https://devcenter.heroku.com/articles/heroku-cli#download-and-install
@@ -19,6 +16,9 @@ Heroku Commands:
 - `heroku apps:info --app my-app-name`
 - `heroku logs --tail --app my-app-name`
 - `heroku run bash --app my-app-name`
+
+API:
+- https://`my-app-name`.herokuapp.com/
 
 References:
 -  https://blog.logrocket.com/ci-cd-node-js-github-actions
