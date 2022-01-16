@@ -14,9 +14,11 @@ Heroku CLI:
 - https://devcenter.heroku.com/articles/authentication
 
 Heroku Commands:
+- `heroku apps`
 - `heroku login`
 - `heroku apps:info --app my-app-name`
 - `heroku logs --tail --app my-app-name`
+- `heroku run bash --app my-app-name`
 
 References:
 -  https://blog.logrocket.com/ci-cd-node-js-github-actions
